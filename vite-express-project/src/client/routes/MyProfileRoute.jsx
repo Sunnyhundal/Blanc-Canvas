@@ -25,6 +25,29 @@ function convertRate(cents) {
 }
 
 export default function MyProfile() {
+<<<<<<< Updated upstream
+=======
+
+    const { id } = useParams();
+    const [user, setUser] = useState({images: []});
+  
+    useEffect(() => {
+      const fetchUser = async () => {
+        try {
+          const response = await fetch(`/api/users/3`); //change to id based on session id when ready
+          const data = await response.json();
+          setUser(data[0]);
+          console.log(data);
+        }
+        catch (error) {
+          console.error(error);
+        }
+      }
+      fetchUser();
+    }
+    , [id]);
+
+>>>>>>> Stashed changes
   return(
     <div className="m-10 flex flex-col justify-center">
       <header className="font-subHeading text-xl text-accent flex justify-between p-5">
