@@ -19,10 +19,11 @@ export const locationType = [
   { id: 8, name: 'Metchosin'},
   { id: 9, name: 'Sooke'},
   { id: 10, name: 'Esquimalt'},
-  { id: 11, name: 'Central Saanich'},
-  { id: 12, name: 'North Saanich'},
-  { id: 13, name: 'Sidney'},
-  { id: 14, name: 'Other'},
+  { id: 11, name: 'Vic West'},
+  { id: 12, name: 'Central Saanich'},
+  { id: 13, name: 'North Saanich'},
+  { id: 14, name: 'Sidney'},
+  { id: 15, name: 'Other'},
 ];
 
 export const artistType = [
