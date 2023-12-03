@@ -104,7 +104,7 @@ export default function UserProfile() {
         </header>
       )}
 
-      <main className="flex justify-center">
+      <main className="flex flex-col justify-center items-center md:flex-row">
         {/* Edit view is rendered only when 'editing' is true */}
         {editing && (
           <div className="w-80 grid grid-cols-1 content-around">
@@ -176,7 +176,7 @@ export default function UserProfile() {
           </div>
         )}
 
-        <div className="m-5 w-80 h-80 overflow-hidden border border-gray-300 drop-shadow-3xl rounded-3xl">
+        <div className="m-5 w-60 h-60 md:w-80 md:h-80 overflow-hidden border border-gray-300 drop-shadow-3xl rounded-3xl">
           <img
             src={user.profile_picture}
             alt={`${user.username} profile image`}
@@ -185,12 +185,16 @@ export default function UserProfile() {
         </div>
 
         <div className="w-80 grid grid-cols-1 content-around">
-          <h2 className="font-heading text-3xl">{user.name}</h2>
-          <p className="text-textSecondary">{user.bio}</p>
-          <span className="text-accent">
+          <h2 className="font-heading text-3xl pb-6">{user.name}</h2>
+          <p className="text-textSecondary pb-6">{user.bio}</p>
+          <span className="text-accent font-subHeading">
             Rate: ${convertRate(user.wage)} / hour
           </span>
+          {isLoggedIn && user.id != loggedInUser.id &&(
+          <button className="btn btn-sm btn-primary mt-2 font-subHeading">Contact this artist</button>
+        )}
         </div>
+        
       </main>
 
       <section className="flex flex-col justify-center items-center">

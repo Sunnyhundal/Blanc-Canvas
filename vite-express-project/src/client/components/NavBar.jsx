@@ -19,11 +19,6 @@ export default function NavBar({ openModal }) {
     navigate("/");
   }, [navigate]);
 
-  const menu = [
-    { name: "Find Artists", href: "/artists" },
-    { name: "Find Gigs", href: "/gigs" },
-  ];
-
   return (
     <nav className="flex flex-wrap items-center justify-around p-4">
       <span
@@ -34,16 +29,6 @@ export default function NavBar({ openModal }) {
       </span>
       <div>
         <ul className="flex space-x-6">
-          {/* <li>
-            <a
-              href="/artists"
-              className="font-subHeading text-lg font-semibold leading-6 hover:text-primary-content
-              uppercase mx-10 transition-all duration-500 before:content-[none] after:content-[none]"
-            >
-              Find Artists
-            </a>
-          </li> */}
-
            <li className="group inline-block relative">
               <button className="inline-flex items-center ">
                 <span 
@@ -79,7 +64,7 @@ export default function NavBar({ openModal }) {
 
         
       </div>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 items-center">
         <ThemeController />
         {/* Conditionally render different buttons based on the isLoggedIn state */}
         {isLoggedIn ? (
