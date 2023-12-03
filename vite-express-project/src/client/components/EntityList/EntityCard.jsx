@@ -24,17 +24,20 @@ export const EntityCard = ({ style, data, isArtists, likesData }) => {
   const navigate = useNavigate();
 
   const { loggedInUser, isLoggedIn } = useAuth();
+  const userId = loggedInUser?.id;
   // const { items, liked, handleLike, handleDislike } = useLikes(isLoggedIn, loggedInUser.id, data);
 
   const { liked: processedLiked } = useProcessLikesData(likesData, data);
 
   useEffect(() => {
-    setLiked(processedLiked);
-  }, [processedLiked]); // Update when processedLiked changes
+    if(likesData) {
+      setLiked(processedLiked);
+    }
+  }, [processedLiked, likesData]); // Update when processedLiked changes
 
   const { handleLike, handleDislike } = useLikes(
     isLoggedIn,
-    loggedInUser.id,
+    userId,
     data
   );
 
