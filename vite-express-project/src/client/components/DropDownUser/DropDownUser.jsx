@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAuth } from "../../hooks/AuthContext";
 import { Link } from "react-router-dom";
 
-const DropDownUser = () => {
+const DropDownUser = ({ openModal2 }) => {
   const { isLoggedIn, loggedInUser } = useAuth();
   const [isOpen, setIsopen] = useState(false);
   const [profilePicture, setProfilePicture] = useState(null);
@@ -42,7 +42,7 @@ const DropDownUser = () => {
       fetchProfilePicture();
     }
   }, [isLoggedIn, user, profilePicture, isLoadingPicture]);
-  
+
   const defaultProfilePicture = "../public/images/Default-User.png";
 
   const profilePictureStyle = {
@@ -67,6 +67,12 @@ const DropDownUser = () => {
             </li>
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
               <Link to={`/likeditems/${loggedInUser.id}`}>My Liked Items</Link>
+            </li>
+            <li
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={toggleDropdown}
+            >
+              <p onClick={openModal2}> Messages </p>
             </li>
           </ul>
         </div>

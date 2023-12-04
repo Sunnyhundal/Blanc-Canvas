@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ThemeController from "./ThemeController";
 import DropDownUser from "./DropDownUser/DropDownUser";
 
-export default function NavBar({ openModal }) {
+export default function NavBar({ openModal, openModal2, onSendMessage }) {
   const { isLoggedIn, logout, user } = useAuth();
 
   const navigate = useNavigate();
@@ -79,7 +79,10 @@ export default function NavBar({ openModal }) {
         {/* Conditionally render different buttons based on the isLoggedIn state */}
         {isLoggedIn ? (
           <>
-            <DropDownUser />
+            <DropDownUser
+              openModal2={openModal2}
+              onSendMessage={onSendMessage}
+            />
 
             <button
               onClick={() => handleLogout()}
