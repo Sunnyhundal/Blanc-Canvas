@@ -1,6 +1,6 @@
 # Blanc Canvas - Lighthouse Labs Finals Project
 
-![Blanc Canvas screenshot](vite-express-project/docs/screenshots/BlancCanvas_landing_page.png)
+![Blanc Canvas screenshot](vite-express-project/docs/BlancCanvas_landing_page.png)
 ![Blanc Canvas screenshot](vite-express-project/docs/screenshots/listings.png)
 
 
