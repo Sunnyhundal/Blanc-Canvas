@@ -1,4 +1,9 @@
 # Blanc Canvas - Lighthouse Labs Finals Project
+
+![Blanc Canvas screenshot](vite-express-project/docs/screenshots/BlancCanvas_landing_page.png)
+![Blanc Canvas screenshot](vite-express-project/docs/screenshots/listings.png)
+
+
 This project was created as a graduation project for [Lighthouse Labs](https://github.com/lighthouse-labs) Full stack Web Development Bootcamp
 
 Blanc Canvas - BC is  focused on an initial release designed to address the need for a platform to connect artists and those seeking the services of artists. This document outlines the key features, development strategy, and expected outcomes of the Minimum Viable Product.
