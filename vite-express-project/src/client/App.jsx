@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import LandingRoute from "./routes/LandingRoute";
 import UserProfile from "./routes/UserProfileRoute";
-import SignupModal from "./components/SignupModal";
+import SignupModal from "./components/SignupModal.jsx";
 import ProjectProfile from "./routes/ProjectProfileRoute";
 
 import LikedItemsRoute from "./routes/LikedItemsRoute";
